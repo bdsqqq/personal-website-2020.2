@@ -1,7 +1,13 @@
 import React from "react";
+import Logo from "../Logo";
 
 const Landing = () => {
-  return <h1>I'm the Landing page</h1>;
+  return (
+    <>
+      <Logo />
+      <h1>I'm the Landing page</h1>
+    </>
+  );
 };
 
 export default Landing;
