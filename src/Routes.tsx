@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Landing from "./components/Landing";
+import Landing from "./pages/Landing";
 
 const Routes = () => {
   return (
