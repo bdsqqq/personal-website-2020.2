@@ -1,10 +1,11 @@
 import React from "react";
+import { LogoType } from "./styles";
 
 const Logo = () => {
   return (
-    <span>
+    <LogoType>
       igor <br /> bedesqui
-    </span>
+    </LogoType>
   );
 };
 
