@@ -1,9 +1,13 @@
 import React from "react";
 import { LogoType } from "./styles";
 
-const Logo = () => {
+interface LogoProps {
+  color?: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ color }) => {
   return (
-    <LogoType>
+    <LogoType color={color}>
       igor <br /> bedesqui
     </LogoType>
   );
