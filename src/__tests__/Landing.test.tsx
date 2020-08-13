@@ -1,9 +1,19 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Landing from "../pages/Landing";
+import { ThemeProvider } from "styled-components";
 
-test("renders I'm the Landing page", () => {
-  const { getByText } = render(<Landing />);
-  const textElement = getByText(/I'm the Landing page/i);
+import GlobalStyles from "../styles/global";
+
+import DefaultTheme from "../styles/themes/default";
+
+test("renders Logo", () => {
+  const { getByText } = render(
+    <ThemeProvider theme={DefaultTheme}>
+      <GlobalStyles />
+      <Landing />
+    </ThemeProvider>
+  );
+  const textElement = getByText(/igor bedesqui/i);
   expect(textElement).toBeInTheDocument();
 });

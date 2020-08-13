@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders Landing", () => {
   const { getByText } = render(<App />);
-  const textElement = getByText(/I'm the Landing page/i);
+  const textElement = getByText(/igor bedesqui/i);
   expect(textElement).toBeInTheDocument();
 });
