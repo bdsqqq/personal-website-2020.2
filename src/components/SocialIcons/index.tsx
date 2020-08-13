@@ -5,7 +5,7 @@ import { FiLinkedin, FiGithub, FiInstagram } from "react-icons/fi";
 import { SocialIcon, SocialIconsContainer } from "./styles";
 
 interface SocialIconsProps {
-  color: string;
+  color: "light" | "dark";
 }
 
 const SocialIcons: React.FC<SocialIconsProps> = ({ color }) => {

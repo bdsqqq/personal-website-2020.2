@@ -7,7 +7,10 @@ export const SocialIconsContainer = styled.div`
   width: max-content;
 
   & > a {
-    color: ${(props) => props.color || props.theme.colors.primaryWhite};
+    color: ${(props) =>
+      props.color === "dark"
+        ? props.theme.colors.secondaryBlack
+        : props.theme.colors.primaryWhite};
   }
 
   & > a + a {
@@ -15,7 +18,7 @@ export const SocialIconsContainer = styled.div`
   }
 `;
 
-const SocialIcon = styled.a`
+export const SocialIcon = styled.a`
   font-size: 2.4rem;
   text-decoration: none;
   transition: 0.3s ease-in-out;
@@ -24,5 +27,3 @@ const SocialIcon = styled.a`
     opacity: 0.6;
   }
 `;
-
-export { SocialIcon };
