@@ -2,9 +2,12 @@ import styled from "styled-components";
 import { mq } from "../../styles/global";
 
 export const HeaderWrapper = styled.header`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  z-index: 1010;
 
   color: ${(props) =>
     props.color === "dark"
