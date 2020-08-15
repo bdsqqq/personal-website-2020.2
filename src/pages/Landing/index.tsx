@@ -17,6 +17,7 @@ const Landing = () => {
   return (
     <>
       <Page>
+        <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
         <Wrapper>
           <Header color="light" />
           <Main>
