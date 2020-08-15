@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { Page, Wrapper, Main, Title, Footer } from "./styles";
 
+import useToggleIsOpen from "../../hooks/useToggleState";
+
 import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
 
