@@ -7,14 +7,11 @@ import { HeaderWrapper, MenuIcon } from "./styles";
 
 interface HeaderProps {
   color?: "light" | "dark";
+  isOpen: boolean;
+  toggleIsOpen: any;
 }
 
-const Header: React.FC<HeaderProps> = ({ color }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleIsOpen = () => {
-    setIsOpen(!isOpen);
-  };
+const Header: React.FC<HeaderProps> = ({ color, isOpen, toggleIsOpen }) => {
   return (
     <HeaderWrapper color={color}>
       <Logo color={color} />
