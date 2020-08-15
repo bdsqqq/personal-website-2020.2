@@ -6,6 +6,7 @@ import useToggleIsOpen from "../../hooks/useToggleState";
 
 import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
+import Menu from "../../components/Menu";
 
 const Landing = () => {
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
@@ -30,6 +31,7 @@ const Landing = () => {
         <Footer>
           <SocialIcons color="light" />
         </Footer>
+        <Menu />
       </Page>
     </>
   );
