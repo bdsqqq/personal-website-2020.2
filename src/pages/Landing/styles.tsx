@@ -31,3 +31,8 @@ export const Title = styled.h1`
     font-size: 4.8rem;
   }
 `;
+
+export const Footer = styled.footer`
+  position: relative;
+  z-index: 1010;
+`;
