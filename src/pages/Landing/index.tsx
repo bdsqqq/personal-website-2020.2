@@ -20,7 +20,6 @@ const Landing = () => {
       <Page>
         <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
         <Wrapper>
-          <Header color="light" />
           <Main>
             <Title data-testid="MainTitleText">
               Desenvolvedor Web pronto para criar algo incrivel!
