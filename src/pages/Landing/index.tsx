@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Page, Wrapper, Main, Title } from "./styles";
+import { Page, Wrapper, Main, Title, Footer } from "./styles";
 
 import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
@@ -24,9 +24,9 @@ const Landing = () => {
           </Main>
         </Wrapper>
 
-        <footer>
+        <Footer>
           <SocialIcons color="light" />
-        </footer>
+        </Footer>
       </Page>
     </>
   );
