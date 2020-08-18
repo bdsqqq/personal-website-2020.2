@@ -7,8 +7,6 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  z-index: 1010;
-
   color: ${(props) =>
     props.color === "dark"
       ? props.theme.colors.secondaryBlack
