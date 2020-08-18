@@ -3,7 +3,11 @@ import React from "react";
 import Header from "../Header";
 import { Overlay, Wrapper, Nav, MenuItem } from "./styles";
 
-const Menu: React.FC = () => {
+interface MenuProps {
+  isOpen: boolean;
+  toggleIsOpen: any;
+}
+const Menu: React.FC<MenuProps> = ({ isOpen, toggleIsOpen }) => {
   return (
     <Wrapper>
       <Nav>
