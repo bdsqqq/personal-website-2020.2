@@ -9,13 +9,16 @@ interface MenuProps {
 }
 const Menu: React.FC<MenuProps> = ({ isOpen, toggleIsOpen }) => {
   return (
-    <Wrapper>
-      <Nav>
-        <MenuItem href="#Sobre mim">Sobre mim</MenuItem>
-        <MenuItem href="#Folio">Folio</MenuItem>
-        <MenuItem href="#contato">Contato</MenuItem>
-      </Nav>
-    </Wrapper>
+    <Overlay>
+      <Header isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+      <Wrapper>
+        <Nav>
+          <MenuItem href="#Sobre mim">Sobre mim</MenuItem>
+          <MenuItem href="#Folio">Folio</MenuItem>
+          <MenuItem href="#contato">Contato</MenuItem>
+        </Nav>
+      </Wrapper>
+    </Overlay>
   );
 };
 
