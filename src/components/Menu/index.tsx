@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Wrapper, Nav, MenuItem } from "./styles";
+import Header from "../Header";
+import { Overlay, Wrapper, Nav, MenuItem } from "./styles";
 
 const Menu: React.FC = () => {
   return (
