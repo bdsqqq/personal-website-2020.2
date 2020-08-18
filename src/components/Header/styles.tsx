@@ -14,6 +14,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const MenuIcon = styled.span`
+  cursor: pointer;
   font-size: 3.6rem;
   text-decoration: none;
   transition: 0.3s ease-in-out;
