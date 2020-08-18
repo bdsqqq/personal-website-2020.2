@@ -5,12 +5,12 @@ import { Overlay, Wrapper, Nav, MenuItem } from "./styles";
 
 interface MenuProps {
   isOpen: boolean;
-  toggleIsOpen: any;
+  hide: any;
 }
-const Menu: React.FC<MenuProps> = ({ isOpen, toggleIsOpen }) => {
+const Menu: React.FC<MenuProps> = ({ isOpen, hide }) => {
   return (
-    <Overlay>
-      <Header isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+    <Overlay onClick={hide}>
+      <Header isOpen={isOpen} toggleIsOpen={hide} />
       <Wrapper>
         <Nav>
           <MenuItem href="#Sobre mim">Sobre mim</MenuItem>

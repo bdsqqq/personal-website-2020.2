@@ -30,7 +30,7 @@ const Landing = () => {
         <Footer>
           <SocialIcons color="light" />
         </Footer>
-        <Menu isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
+        <Menu isOpen={menuIsOpen} hide={ToggleMenu} />
       </Page>
     </>
   );
