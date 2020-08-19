@@ -2,13 +2,16 @@ import styled from "styled-components";
 import { mq } from "../../styles/global";
 
 export const Page = styled.div`
+  position: relative;
   width: 100%;
-  background: ${(props) => props.theme.colors.primaryBlack};
+  background: ${(props) => props.theme.colors.secondaryBlack};
 
   padding: 2.4rem;
+  overflow-x: hidden;
 `;
 
 export const Wrapper = styled.div`
+  position: relative;
   width: 100%;
   min-height: 100vh;
 `;
