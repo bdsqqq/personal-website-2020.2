@@ -8,12 +8,27 @@ export const Overlay = styled.div`
   z-index: 1000;
   width: 100%;
   height: 100%;
-  opacity: 0.98;
+  opacity: 0.99;
   overflow-x: hidden;
   overflow-y: hidden;
   padding: 2.4rem;
 
   background: ${(props) => props.theme.colors.secondaryBlack};
+`;
+
+export const SVG = styled.svg`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 40.9rem;
+  height: 14.1rem;
+
+  ${mq[1]} {
+    width: 95rem;
+    height: 20.8rem;
+  }
 `;
 
 export const Wrapper = styled.div`
