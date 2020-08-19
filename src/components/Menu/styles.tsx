@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mq } from "../../styles/global";
 
 export const Overlay = styled.div`
   position: fixed;
@@ -20,8 +21,13 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 80%;
+  margin: 2.4rem auto;
+  text-align: center;
+
+  ${mq[1]} {
+    max-width: 700px;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -31,6 +37,10 @@ export const Nav = styled.nav`
   align-items: center;
 
   height: 60%;
+
+  ${mq[1]} {
+    height: 100%;
+  }
 `;
 
 export const MenuItem = styled.a`
@@ -39,4 +49,9 @@ export const MenuItem = styled.a`
 
   font-size: 2.4rem;
   letter-spacing: 0.8rem;
+
+  ${mq[1]} {
+    font-size: 3.6rem;
+    letter-spacing: 1.2rem;
+  }
 `;
