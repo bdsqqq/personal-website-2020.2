@@ -17,6 +17,8 @@ import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
 import Menu from "../../components/Menu";
 
+import Card from "../../components/Card";
+
 const Landing = () => {
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
 
@@ -39,12 +41,47 @@ const Landing = () => {
 
         <ContentSection>
           <SectionTitle>FOLIO...</SectionTitle>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
-          animi sit maiores ex, eveniet perspiciatis facilis molestiae
-          similique, libero nulla at ab excepturi nihil iusto cum alias a eaque.
-          Reiciendis, nam. Natus nesciunt qui, quia praesentium voluptatibus,
-          perspiciatis vero saepe fugiat provident ab fuga aperiam consectetur
-          exercitationem alias ipsam!
+          <Card
+            project={{
+              id: "test",
+              ano: "test",
+              demo: "test",
+              img:
+                "https://images.unsplash.com/photo-1597938430467-c7a5f65c24f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+              projeto: "test",
+              role: "test",
+              source: "test",
+              tools: ["test", "test"],
+              order: "test",
+            }}
+          />
+          <Card
+            project={{
+              id: "test",
+              ano: "test",
+              demo: "test",
+              img:
+                "https://images.unsplash.com/photo-1597688642705-ab966bf086fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+              projeto: "test",
+              role: "test",
+              tools: ["test", "test"],
+              order: "test",
+            }}
+          />
+          <Card
+            project={{
+              id: "test",
+              ano: "test",
+              demo: "test",
+              img:
+                "https://images.unsplash.com/photo-1597892672196-3bb8b5c06171?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+              projeto: "test",
+              role: "test",
+              source: "test",
+              tools: ["test", "test"],
+              order: "test",
+            }}
+          />
         </ContentSection>
 
         <Footer>
