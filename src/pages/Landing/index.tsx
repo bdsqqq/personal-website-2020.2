@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 
-import { Page, HeroWrapper, Main, HeroText, HeroWord, Footer } from "./styles";
+import {
+  Page,
+  HeroWrapper,
+  Main,
+  HeroText,
+  HeroWord,
+  ContentSection,
+  SectionTitle,
+  Footer,
+} from "./styles";
 
 import useToggleIsOpen from "../../hooks/useToggleState";
 
@@ -27,6 +36,16 @@ const Landing = () => {
             </HeroText>
           </Main>
         </HeroWrapper>
+
+        <ContentSection>
+          <SectionTitle>FOLIO...</SectionTitle>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quia
+          animi sit maiores ex, eveniet perspiciatis facilis molestiae
+          similique, libero nulla at ab excepturi nihil iusto cum alias a eaque.
+          Reiciendis, nam. Natus nesciunt qui, quia praesentium voluptatibus,
+          perspiciatis vero saepe fugiat provident ab fuga aperiam consectetur
+          exercitationem alias ipsam!
+        </ContentSection>
 
         <Footer>
           <SocialIcons color="dark" />
