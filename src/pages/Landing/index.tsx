@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Page, Wrapper, Main, Title, Footer } from "./styles";
+import { Page, HeroWrapper, Main, HeroText, HeroWord, Footer } from "./styles";
 
 import useToggleIsOpen from "../../hooks/useToggleState";
 
@@ -18,17 +18,18 @@ const Landing = () => {
   return (
     <>
       <Page>
-        <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
-        <Wrapper>
+        <HeroWrapper>
+          <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
           <Main>
-            <Title data-testid="MainTitleText">
-              Desenvolvedor Web pronto para criar algo incrivel!
-            </Title>
+            <HeroText data-testid="MainTitleText">
+              Desenvolvedor Web pronto para criar algo <br />
+              <HeroWord>INCRIVEL</HeroWord>
+            </HeroText>
           </Main>
-        </Wrapper>
+        </HeroWrapper>
 
         <Footer>
-          <SocialIcons color="light" />
+          <SocialIcons color="dark" />
         </Footer>
         <Menu isOpen={menuIsOpen} hide={ToggleMenu} />
       </Page>
