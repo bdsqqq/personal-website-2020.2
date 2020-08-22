@@ -3,19 +3,18 @@ import React, { useState } from "react";
 import {
   Page,
   HeroWrapper,
+  Hero,
   Main,
   HeroText,
   HeroWord,
   ContentSection,
-  TitleSVGWrapper,
   IgorWrapper,
-  IgorSVG,
+  StyledIgorSVG,
   SectionTitle,
   Footer,
 } from "./styles";
 
 import useToggleIsOpen from "../../hooks/useToggleState";
-import Igor from "../../assets/svg/Igor.svg";
 
 import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
@@ -35,21 +34,21 @@ const Landing = () => {
       <Page>
         <HeroWrapper>
           <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
-          <Main>
-            <HeroText data-testid="MainTitleText">
-              Desenvolvedor Web pronto para criar algo <br />
-              <HeroWord>INCRIVEL</HeroWord>
-            </HeroText>
-          </Main>
+          <Hero>
+            <Main>
+              <HeroText data-testid="MainTitleText">
+                Desenvolvedor Web pronto para criar algo <br />
+                <HeroWord>INCRIVEL</HeroWord>
+              </HeroText>
+            </Main>
+            <IgorWrapper>
+              <StyledIgorSVG />
+            </IgorWrapper>
+          </Hero>
         </HeroWrapper>
 
         <ContentSection>
-          <TitleSVGWrapper>
-            <IgorWrapper>
-              <IgorSVG src={Igor} alt="" />
-            </IgorWrapper>
-            <SectionTitle>FOLIO...</SectionTitle>
-          </TitleSVGWrapper>
+          <SectionTitle>FOLIO...</SectionTitle>
 
           {/*<Card
             project={{

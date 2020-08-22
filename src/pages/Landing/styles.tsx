@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { mq } from "../../styles/global";
 
+import IgorSVG from "../../components/IgorSVG";
+
 export const Page = styled.div`
   position: relative;
   width: 100%;
@@ -21,6 +23,19 @@ export const HeroWrapper = styled.div`
   background-size: cover;
 `;
 
+export const Hero = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 93%;
+
+  ${mq[0]} {
+    flex-direction: row;
+    height: 90%;
+  }
+`;
+
 export const Main = styled.main`
   display: flex;
   flex-flow: column;
@@ -31,7 +46,7 @@ export const HeroText = styled.h1`
   font-size: 3.6rem;
   letter-spacing: 0.2em;
   max-width: 80rem;
-  margin-top: 8rem;
+  margin-top: 11.25vh;
 
   color: ${(props) => props.theme.colors.primaryWhite};
 
@@ -50,6 +65,24 @@ export const HeroWord = styled.span`
   }
 `;
 
+export const IgorWrapper = styled.div`
+  display: flex;
+  position: relative;
+  z-index: 10;
+
+  ${mq[1]} {
+    flex-direction: row;
+    margin-bottom: -50vh;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-shrink: 0.6;
+  }
+`;
+
+export const StyledIgorSVG = styled(IgorSVG)`
+  scale: 0.3;
+`;
+
 export const ContentSection = styled.article`
   position: relative;
   margin-top: -8rem;
@@ -63,36 +96,6 @@ export const ContentSection = styled.article`
   ${mq[1]} {
     margin-top: -4rem;
     padding: 6rem 8rem;
-  }
-`;
-
-export const TitleSVGWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  flex-direction: column;
-
-  ${mq[1]} {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
-`;
-
-export const IgorWrapper = styled.div`
-  display: flex;
-  position: relative;
-  z-index: 10;
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin-top: -48rem;
-`;
-
-export const IgorSVG = styled.img`
-  position: relative;
-  height: 30%;
-
-  ${mq[1]} {
-    height: 100%;
   }
 `;
 
