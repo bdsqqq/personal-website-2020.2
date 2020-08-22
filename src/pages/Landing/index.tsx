@@ -7,11 +7,15 @@ import {
   HeroText,
   HeroWord,
   ContentSection,
+  TitleSVGWrapper,
+  IgorWrapper,
+  IgorSVG,
   SectionTitle,
   Footer,
 } from "./styles";
 
 import useToggleIsOpen from "../../hooks/useToggleState";
+import Igor from "../../assets/svg/Igor.svg";
 
 import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
@@ -40,8 +44,14 @@ const Landing = () => {
         </HeroWrapper>
 
         <ContentSection>
-          <SectionTitle>FOLIO...</SectionTitle>
-          <Card
+          <TitleSVGWrapper>
+            <IgorWrapper>
+              <IgorSVG src={Igor} alt="" />
+            </IgorWrapper>
+            <SectionTitle>FOLIO...</SectionTitle>
+          </TitleSVGWrapper>
+
+          {/*<Card
             project={{
               id: "test",
               ano: "test",
@@ -81,7 +91,7 @@ const Landing = () => {
               tools: ["test", "test"],
               order: "test",
             }}
-          />
+          />*/}
         </ContentSection>
 
         <Footer>
