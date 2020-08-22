@@ -66,6 +66,36 @@ export const ContentSection = styled.article`
   }
 `;
 
+export const TitleSVGWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  ${mq[1]} {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+`;
+
+export const IgorWrapper = styled.div`
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -48rem;
+`;
+
+export const IgorSVG = styled.img`
+  position: relative;
+  height: 30%;
+
+  ${mq[1]} {
+    height: 100%;
+  }
+`;
+
 export const SectionTitle = styled.h2`
   font-size: 4.8rem;
   letter-spacing: 0.2em;
