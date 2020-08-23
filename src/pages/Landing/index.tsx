@@ -10,6 +10,8 @@ import {
   ContentSection,
   IgorWrapper,
   StyledIgorSVG,
+  InseptionWrapper,
+  StyledInseptionSVG,
   SectionTitle,
   Footer,
 } from "./styles";
@@ -20,7 +22,7 @@ import Header from "../../components/Header";
 import SocialIcons from "../../components/SocialIcons";
 import Menu from "../../components/Menu";
 
-import Card from "../../components/Card";
+// import Card from "../../components/Card";
 
 const Landing = () => {
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
@@ -41,6 +43,9 @@ const Landing = () => {
                 <HeroWord>INCRIVEL</HeroWord>
               </HeroText>
             </Main>
+            <InseptionWrapper>
+              <StyledInseptionSVG />
+            </InseptionWrapper>
             <IgorWrapper>
               <StyledIgorSVG />
             </IgorWrapper>
