@@ -84,17 +84,33 @@ export const HeroWord = styled.span`
 `;
 
 export const IgorWrapper = styled.div`
+  margin-top: -16rem;
+
   ${mq[0]} {
     position: relative;
     z-index: 20;
     grid-row: 1;
     grid-column: 3 / -1;
     align-self: end;
-    max-height: none;
+    margin-top: 0;
   }
 `;
 
 export const StyledIgorSVG = styled(IgorSVG)``;
+
+export const InseptionWrapper = styled.div`
+  height: 40%;
+  ${mq[0]} {
+    position: relative;
+    z-index: 10;
+    grid-row: 1;
+    grid-column: 3 / -1;
+    justify-self: center;
+    align-self: center;
+    height: 70%;
+    margin-top: -16rem;
+  }
+`;
 
 export const StyledInseptionSVG = styled(InseptionSVG)``;
 
