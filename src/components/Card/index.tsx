@@ -1,19 +1,6 @@
 import React from "react";
 
-import {
-  CardWrapper,
-  CardImage,
-  MetaWrapper,
-  Meta,
-  MetaHeader,
-  MetaHeaderItem,
-  MetaRole,
-  MetaToolsWrapper,
-  MetaButtonsWrapper,
-  Button,
-  DisabledButton,
-  Tool,
-} from "./styles";
+import { Card, MetaCard, Thumb } from "./styles";
 
 interface CardProps {
   project: {
@@ -29,41 +16,23 @@ interface CardProps {
   };
 }
 
-const Card: React.FC<CardProps> = ({ project }) => {
-  const Tools = project.tools;
-
+const CardComponent: React.FC<CardProps> = ({ project }) => {
   return (
-    <CardWrapper>
-      <CardImage src={project.img} alt={project.projeto} />
-      <MetaWrapper>
-        <Meta>
-          <MetaHeader>
-            <MetaHeaderItem>{project.projeto}</MetaHeaderItem>
-            <MetaHeaderItem>{project.ano}</MetaHeaderItem>
-          </MetaHeader>
-          <MetaRole>{project.role}</MetaRole>
-          <MetaToolsWrapper>
-            {Tools.map((val: string, index: number) => (
-              <Tool key={index}>{val}</Tool>
-            ))}
-          </MetaToolsWrapper>
-          <MetaButtonsWrapper>
-            <Button target="_blank" href={project.demo}>
-              Demo
-            </Button>
-            {!project.source ? (
-              <DisabledButton>Código privado</DisabledButton>
-            ) : (
-              <Button target="_blank" href={project.source}>
-                Código
-              </Button>
-            )}
-          </MetaButtonsWrapper>
-        </Meta>
-        <span></span>
-      </MetaWrapper>
-    </CardWrapper>
+    <Card>
+      <Thumb
+        backgroundImg={
+          "https://images.unsplash.com/photo-1598281802472-51ee16bfa65c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=20"
+        }
+      />
+      <MetaCard>
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis
+          dolorum excepturi cupiditate tempore totam iure nobis impedit aliquid
+          vero?
+        </h1>
+      </MetaCard>
+    </Card>
   );
 };
 
-export default Card;
+export default CardComponent;
