@@ -8,4 +8,5 @@ export interface Project {
   source?: string;
   tools: string[];
   order: string;
+  height?: any;
 }
