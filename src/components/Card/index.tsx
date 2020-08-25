@@ -1,20 +1,11 @@
 import React, { useState } from "react";
+import { Project } from "../../project";
 import { useSpring, animated } from "react-spring";
 
 import { Card, MetaCard, Thumb } from "./styles";
 
 interface CardProps {
-  project: {
-    id: string;
-    ano: string;
-    demo: string;
-    img: string;
-    projeto: string;
-    role: string;
-    source?: string;
-    tools: string[];
-    order: string;
-  };
+  project: Project;
 }
 
 const CardComponent: React.FC<CardProps> = ({ project }) => {
