@@ -43,8 +43,7 @@ const MasonryCardContainer = () => {
       <a.div
         key={item.id}
         style={{
-          height: `${height}rem`,
-          transform: xy.to((x, y) => `translate(${x}px,${y}rem)`),
+          transform: xy.to((x: any, y: any) => `translate(${x}px,${y}rem)`),
           width,
         }}
       >
