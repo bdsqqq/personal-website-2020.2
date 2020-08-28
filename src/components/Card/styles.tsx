@@ -29,7 +29,7 @@ export const Thumb = styled(ThumbBase)`
 `;
 
 export const MetaCard = styled.div`
-  width: 90%;
+  width: 95%;
   max-height: 90%;
   transform-origin: 50% 50%;
   position: absolute;
