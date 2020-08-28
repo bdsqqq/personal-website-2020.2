@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useTransition, a } from "react-spring";
-import useMeasure from "react-use-measure";
 import useMedia from "../../hooks/useMedia";
+import useMeasure from "../../hooks/useMeasure";
 
 import { List } from "./styles";
 
 import data from "./data";
+
+interface MasonryCardContainerProps {
+  width: number;
+}
 
 const MasonryCardContainer = () => {
   const columns = useMedia(
@@ -13,21 +17,40 @@ const MasonryCardContainer = () => {
     [4, 3, 2],
     1
   );
-  const [measureRef, { width }] = useMeasure();
-  const [heights, setHeights] = useState<any[]>([]);
-  const [items, setItems] = useState(data);
+
+  const { width } = useMeasure();
+  //const width = useContext(MeasureContext);
+  // const [measureRef, { width }] = useMeasure({
+  //   scroll: false,
+  //   polyfill: resizeObserverPolyfill,
+  // });
+
+  //const [heights, setHeights] = useState<any[]>([]);
+  const [items] = useState(data);
+  //const [heights, setHeights] = useState<any>(new Array(columns).fill(0));
+  const heights = new Array(columns).fill(0);
   useEffect(() => {
-    setHeights(new Array(columns).fill(0));
-  }, [columns]);
-  //const heights = new Array(columns).fill(0);
-  const gridItems = items.map((child, i) => {
+    console.log(width, heights, columns);
+  });
+
+  let gridItems = items.map((child, i) => {
     const column = heights.indexOf(Math.min(...heights));
     const xy = [
       (width / columns) * column,
       (heights[column] += child.height / 2) - child.height / 2,
     ];
-    return { ...child, xy, width: width / columns, height: child.height / 2 };
+
+    return {
+      ...child,
+      xy,
+      width: width / columns,
+      height: child.height / 2,
+    };
   });
+
+  // useEffect(() => {
+  //   setHeights(heights.map(() => 0));
+  // }, [columns, width]);
 
   const transitions = useTransition(gridItems, {
     from: ({ xy, width, height }) => ({ xy, width, height }),
@@ -38,13 +61,14 @@ const MasonryCardContainer = () => {
     trail: 25,
   });
 
-  const fragment = transitions(({ xy, height, width }, item) => {
+  const fragment = transitions(({ xy, width }, item) => {
     return (
       <a.div
         key={item.id}
         style={{
           transform: xy.to((x: any, y: any) => `translate(${x}px,${y}rem)`),
           width,
+          height: `${item.height}rem`,
         }}
       >
         <div style={{ backgroundImage: item.css }} />
@@ -53,9 +77,9 @@ const MasonryCardContainer = () => {
   });
 
   return (
-    <List ref={measureRef} style={{ height: `${Math.max(...heights)}rem` }}>
-      {fragment}
-    </List>
+    <>
+      <List style={{ height: `${Math.max(...heights)}rem` }}>{fragment}</List>
+    </>
   );
 };
 
