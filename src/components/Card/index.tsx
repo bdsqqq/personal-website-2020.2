@@ -34,11 +34,7 @@ const CardComponent: React.FC<CardProps> = ({ project }) => {
         setExpanded(false);
       }}
     >
-      <Thumb
-        backgroundImg={
-          "https://images.unsplash.com/photo-1598281802472-51ee16bfa65c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=20"
-        }
-      />
+      <Thumb backgroundImg={project.img} />
       <AnimatedMetaCard
         style={{
           transform: scale,
