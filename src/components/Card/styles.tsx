@@ -9,8 +9,8 @@ const ThumbBase: React.FC<thumbProps> = (props) => <div {...props} />;
 
 export const Card = styled.div`
   position: relative;
-  width: 24rem;
-  height: 36rem;
+  height: 100%;
+  height: 100%;
   margin: 1rem;
 
   & > * {
