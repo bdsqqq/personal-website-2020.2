@@ -8,7 +8,7 @@ interface CardProps {
   project: Project;
 }
 
-const CardComponent: React.FC<CardProps> = ({ project }) => {
+const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const AnimatedMetaCard = animated(MetaCard);
@@ -49,6 +49,6 @@ const CardComponent: React.FC<CardProps> = ({ project }) => {
       </AnimatedMetaCard>
     </Card>
   );
-};
+});
 
 export default CardComponent;
