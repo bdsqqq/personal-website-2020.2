@@ -13,7 +13,7 @@ const CardComponent: React.FC<CardProps> = ({ project }) => {
 
   const AnimatedMetaCard = animated(MetaCard);
 
-  const { scale, opacity } = useSpring({
+  const { scale, opacity } = useSpring<any>({
     config: {
       velocity: 0,
       tension: 280,

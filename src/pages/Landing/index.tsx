@@ -19,6 +19,7 @@ import {
 import useToggleIsOpen from "../../hooks/useToggleState";
 
 import Header from "../../components/Header";
+import MasonryGrid from "../../components/MasonryGrid";
 import SocialIcons from "../../components/SocialIcons";
 import Menu from "../../components/Menu";
 
@@ -54,6 +55,8 @@ const Landing = () => {
 
         <ContentSection>
           <SectionTitle>FOLIO...</SectionTitle>
+
+          <MasonryGrid />
 
           {/*<Card
             project={{
