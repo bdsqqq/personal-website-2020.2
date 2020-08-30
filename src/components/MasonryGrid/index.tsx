@@ -3,6 +3,9 @@ import data from "./data";
 import { useTransition, animated } from "react-spring";
 import useMedia from "../../hooks/useMedia";
 import useMeasure from "react-use-measure";
+
+import Card from "../Card";
+
 import { List } from "./styles";
 
 const MasonryGrid = React.memo(() => {
@@ -47,7 +50,7 @@ const MasonryGrid = React.memo(() => {
           style={{
             height: `${item.height}rem`,
             transform: xy.interpolate(
-              (x: number, y: number) => `translate(${x}px,${y}rem)`
+              (x: number, y: number) => `translate3d(${x}px,${y}rem,0)`
             ),
             ...rest,
           }}
