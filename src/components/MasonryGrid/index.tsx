@@ -44,20 +44,35 @@ const MasonryGrid = React.memo(() => {
   // Render the grid
   return (
     <List ref={bind} style={{ height: `${Math.max(...heights)}rem` }}>
-      {transitions.map(({ item, props: { xy, height, ...rest }, key }: any) => (
-        <animated.div
-          key={key}
-          style={{
-            height: `${item.height}rem`,
-            transform: xy.interpolate(
-              (x: number, y: number) => `translate3d(${x}px,${y}rem,0)`
-            ),
-            ...rest,
-          }}
-        >
-          <div style={{ backgroundImage: `url(${item.css})` }} />
-        </animated.div>
-      ))}
+      {transitions.map(
+        ({ item, props: { xy, height, opacity, ...rest }, key }: any) => (
+          <animated.div
+            key={key}
+            style={{
+              height: `${item.height}rem`,
+              transform: xy.interpolate(
+                (x: number, y: number) => `translate3d(${x}px,${y}rem,0)`
+              ),
+              ...rest,
+            }}
+          >
+            <Card
+              project={{
+                id: item.id,
+                ano: "",
+                demo: "",
+                img: item.css,
+                projeto: "",
+                role: "",
+                source: "",
+                tools: [""],
+                order: "1",
+                height: item.height,
+              }}
+            />
+          </animated.div>
+        )
+      )}
     </List>
   );
 });
