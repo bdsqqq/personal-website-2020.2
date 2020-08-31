@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import { Project } from "../../project";
 import { useSpring, animated } from "react-spring";
+import { FiCode, FiPlay } from "react-icons/fi";
 
-import { Card, MetaCard, Thumb } from "./styles";
+import {
+  Card,
+  Thumb,
+  MetaCard,
+  MetaCardHeader,
+  MetaCardTitle,
+  MetaCardYear,
+  MetaCardBody,
+  MetaCardRole,
+  MetaCardTools,
+  MetaCardTool,
+  MetaCardButtonsWrapper,
+  MetaCardButton,
+  MetaCardDetails,
+} from "./styles";
 
 interface CardProps {
   project: Project;
@@ -41,11 +56,39 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
           opacity: opacity,
         }}
       >
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis
-          dolorum excepturi cupiditate tempore totam iure nobis impedit aliquid
-          vero?
-        </h1>
+        <MetaCardHeader>
+          <MetaCardTitle>project A</MetaCardTitle>
+          <MetaCardYear>{project.ano}</MetaCardYear>
+        </MetaCardHeader>
+        <MetaCardBody>
+          <MetaCardRole>{project.role}</MetaCardRole>
+          <MetaCardTools>
+            {project.tools.map((tool, index) => (
+              <MetaCardTool key={`tool-${index}`}>{tool}</MetaCardTool>
+            ))}
+          </MetaCardTools>
+          {(project.demo || project.source) && (
+            <MetaCardButtonsWrapper>
+              {project.demo && (
+                <MetaCardButton href={project.demo} target="_blank">
+                  <FiPlay /> <span> Demo </span>
+                </MetaCardButton>
+              )}
+              {project.source && (
+                <MetaCardButton href={project.source} target="_blank">
+                  <FiCode /> <span> Código </span>
+                </MetaCardButton>
+              )}
+            </MetaCardButtonsWrapper>
+          )}
+          <MetaCardDetails>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti,
+            possimus dicta natus vel reprehenderit veniam quos impedit numquam
+            placeat ratione molestias odit officia culpa, excepturi hic voluptas
+            dignissimos maiores labore fugit et facere aperiam, consectetur
+            nesciunt sed. Amet, voluptatem vel.
+          </MetaCardDetails>
+        </MetaCardBody>
       </AnimatedMetaCard>
     </Card>
   );
