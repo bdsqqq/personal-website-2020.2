@@ -119,7 +119,7 @@ export const ContentSection = styled.article`
   margin-top: -8rem;
   border-radius: 6rem 0 0 0;
   min-height: 50vh;
-  padding: 6rem 4rem;
+  padding: 6rem 2rem;
 
   background: ${(props) => props.theme.colors.primaryWhite};
   color: ${(props) => props.theme.colors.secondaryBlack};
