@@ -11,6 +11,13 @@ interface CardProps {
 const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
+  const handleExpand = () => {
+    setExpanded(true);
+  };
+  const handleShrink = () => {
+    setExpanded(false);
+  };
+
   const AnimatedMetaCard = animated(MetaCard);
 
   const { scale, opacity } = useSpring<any>({
@@ -26,14 +33,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
     },
   });
   return (
-    <Card
-      onMouseEnter={() => {
-        setExpanded(true);
-      }}
-      onMouseLeave={() => {
-        setExpanded(false);
-      }}
-    >
+    <Card onMouseEnter={handleExpand} onMouseLeave={handleShrink}>
       <Thumb backgroundImg={project.img} />
       <AnimatedMetaCard
         style={{
