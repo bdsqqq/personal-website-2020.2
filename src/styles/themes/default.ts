@@ -7,7 +7,7 @@ export default {
     primaryBlack: "#2E2E2E",
     secondaryBlack: "#131313",
 
-    fadedText: "#5B5B5B",
+    fadedWhite: "#f2f2f240",
   },
 
   fonts: {},

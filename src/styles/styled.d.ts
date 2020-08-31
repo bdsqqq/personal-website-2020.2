@@ -10,7 +10,7 @@ declare module "styled-components" {
       primaryBlack: string;
       secondaryBlack: string;
 
-      fadedText: string;
+      fadedWhite: string;
     };
   }
 }
