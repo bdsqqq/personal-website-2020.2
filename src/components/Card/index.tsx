@@ -19,9 +19,9 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
       tension: 500,
       friction: 20,
     },
-    from: { scale: "scale(0)", opacity: 0 },
+    from: { scale: "scale3d(0, 0, 0)", opacity: 0 },
     to: {
-      scale: expanded ? "scale(1)" : "scale(0)",
+      scale: expanded ? "scale3d(1, 1, 1)" : "scale3d(0, 0, 0)",
       opacity: expanded ? 1 : 0,
     },
   });
