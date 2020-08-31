@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import data from "./data";
 import { useTransition, animated } from "react-spring";
 import useMedia from "../../hooks/useMedia";
@@ -29,17 +29,14 @@ const MasonryGrid = React.memo(() => {
     ]; // X = container width / number of columns * column index, Y = it's just the height of the current column
     return { ...child, xy, width: width / columns, height: child.height / 2 };
   });
-  // Hook5: Turn the static grid values into animated transitions, any addition, removal or change will be animated
+  // Hook4: Turn the static grid values into animated transitions, any addition, removal or change will be animated
   const transitions: any = useTransition(gridItems, (item) => item.css, {
     from: ({ xy, width, height }) => ({ xy, width, height, opacity: 0 }),
     enter: ({ xy, width, height }) => ({ xy, width, height, opacity: 1 }),
     update: ({ xy, width, height }) => ({ xy, width, height }),
     leave: { height: 0, opacity: 0 },
-    config: { mass: 5, tension: 500, friction: 100 },
-    trail: 25,
-  });
-  useEffect(() => {
-    console.log(width, heights, columns);
+    config: { mass: 3, tension: 500, friction: 100 },
+    trail: 15,
   });
   // Render the grid
   return (
