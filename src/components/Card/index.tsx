@@ -23,7 +23,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
   const { scale, opacity } = useSpring<any>({
     config: {
       velocity: 5,
-      tension: 500,
+      tension: 350,
       friction: 20,
     },
     from: { scale: "scale3d(0, 0, 0)", opacity: 0 },
