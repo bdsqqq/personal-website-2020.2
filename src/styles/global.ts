@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const breakpoints = [40, 64, 144];
+export const breakpoints = [40, 64, 144];
 
 export const mq = breakpoints.map((bp) => `@media (min-width: ${bp}rem)`);
 
