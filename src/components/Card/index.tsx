@@ -22,7 +22,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
     from: { scale: "scale3d(0, 0, 0)", opacity: 0 },
     to: {
       scale: expanded ? "scale3d(1, 1, 1)" : "scale3d(0, 0, 0)",
-      opacity: expanded ? 1 : 0,
+      opacity: expanded ? 0.9 : 0,
     },
   });
   return (

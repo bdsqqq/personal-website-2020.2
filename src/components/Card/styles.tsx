@@ -38,7 +38,7 @@ export const MetaCard = styled.div`
   bottom: 0;
 
   padding: 1em;
-  background-color: #000000f0;
-  color: #f2f2f2;
-  overflow: hidden;
+  background-color: ${(props) => props.theme.colors.primaryBlack};
+  color: ${(props) => props.theme.colors.primaryWhite};
+  overflow: auto;
 `;
