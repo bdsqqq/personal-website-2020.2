@@ -44,7 +44,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
     from: { scale: "scale3d(0, 0, 0)", opacity: 0 },
     to: {
       scale: expanded ? "scale3d(1, 1, 1)" : "scale3d(0, 0, 0)",
-      opacity: expanded ? 0.9 : 0,
+      opacity: expanded ? 0.98 : 0,
     },
   });
   return (
@@ -64,7 +64,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
           <MetaCardRole>{project.role}</MetaCardRole>
           <MetaCardTools>
             {project.tools.map((tool, index) => (
-              <MetaCardTool key={`tool-${index}`}>{tool}</MetaCardTool>
+              <MetaCardTool key={`tool-${index}`}>{tool + " "}</MetaCardTool>
             ))}
           </MetaCardTools>
           {(project.demo || project.source) && (

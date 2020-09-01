@@ -80,6 +80,7 @@ export const MetaCardTool = styled.span`
   border: solid 1px ${(props) => props.theme.colors.fadedWhite};
   padding: 0 0.8rem;
   border-radius: 1.6rem;
+  line-height: 2rem;
 `;
 
 export const MetaCardButtonsWrapper = styled.div`
