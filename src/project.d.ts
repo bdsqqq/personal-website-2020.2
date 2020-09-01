@@ -1,9 +1,9 @@
 export interface Project {
   id: string;
-  ano: string;
+  year: string;
   demo?: string;
   img: string;
-  projeto: string;
+  name: string;
   role: string;
   source?: string;
   tools: string[];

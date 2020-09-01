@@ -58,7 +58,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
       >
         <MetaCardHeader>
           <MetaCardTitle>project A</MetaCardTitle>
-          <MetaCardYear>{project.ano}</MetaCardYear>
+          <MetaCardYear>{project.year}</MetaCardYear>
         </MetaCardHeader>
         <MetaCardBody>
           <MetaCardRole>{project.role}</MetaCardRole>
