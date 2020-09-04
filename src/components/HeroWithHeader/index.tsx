@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import useToggleIsOpen from "../../hooks/useToggleState";
-import Header from "../../components/Header";
-import Menu from "../../components/Menu";
+import Header from "../Header";
+import Menu from "../Menu";
 
 import { HeroWrapper } from "./styles";
 
