@@ -12,6 +12,15 @@ const Menu: React.FC<MenuProps> = ({ isOpen, hide }) =>
     ? ReactDOM.createPortal(
         <>
           <Overlay onClick={hide}>
+            <Header isOpen={isOpen} toggleIsOpen={hide} />
+            <Wrapper>
+              <Nav>
+                <MenuItem to="/">Home</MenuItem>
+                <MenuItem to="/About">Sobre mim</MenuItem>
+                <MenuItem to="/Folio">Folio</MenuItem>
+                <MenuItem to="/Contact">Contato</MenuItem>
+              </Nav>
+            </Wrapper>
             <SVG
               viewBox="0 0 950 208"
               fill="none"
@@ -38,15 +47,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, hide }) =>
                 fill-opacity="0.03"
               />
             </SVG>
-
-            <Header isOpen={isOpen} toggleIsOpen={hide} />
-            <Wrapper>
-              <Nav>
-                <MenuItem href="#Sobre mim">Sobre mim</MenuItem>
-                <MenuItem href="#Folio">Folio</MenuItem>
-                <MenuItem href="#contato">Contato</MenuItem>
-              </Nav>
-            </Wrapper>
           </Overlay>
         </>,
         document.body

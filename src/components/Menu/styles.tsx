@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import { mq } from "../../styles/global";
 
 export const Overlay = styled.div`
@@ -17,6 +18,7 @@ export const Overlay = styled.div`
 `;
 
 export const SVG = styled.svg`
+  z-index: 1000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,6 +48,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Nav = styled.nav`
+  z-index: 1010;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -58,7 +61,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const MenuItem = styled.a`
+export const MenuItem = styled(NavLink)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.primaryWhite};
 
