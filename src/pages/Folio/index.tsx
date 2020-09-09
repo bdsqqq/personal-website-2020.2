@@ -7,17 +7,19 @@ import SocialIcons from "../../components/SocialIcons";
 import {
   Page,
   ContentSection,
-  SectionTitle,
+  SectionSubTitle,
   Footer,
 } from "../../styles/general";
 
 const Folio = () => {
   return (
     <Page>
-      <Hero sm />
-
+      <Hero pageTitle={"Folio"} sm />
       <ContentSection>
-        <SectionTitle>FOLIO</SectionTitle>
+        <SectionSubTitle>
+          Clique em uma imagem para revelar ou ocultar detalhes sobre o
+          projeto...
+        </SectionSubTitle>
         <MasonryGrid />
       </ContentSection>
 
