@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import Logo from "../../components/Logo";
+
+import useToggleIsOpen from "../../hooks/useToggleState";
 
 import { HeaderWrapper, MenuIcon } from "./styles";
 
@@ -28,3 +30,11 @@ const Header: React.FC<HeaderProps> = ({ color, isOpen, toggleIsOpen }) => {
 };
 
 export default Header;
+
+export const useHeaderMenu = (): [boolean, () => void] => {
+  const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
+  const ToggleMenu = () => {
+    useToggleIsOpen(menuIsOpen, setmenuIsOpen);
+  };
+  return [menuIsOpen, ToggleMenu];
+};
