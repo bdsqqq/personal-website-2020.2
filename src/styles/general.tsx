@@ -29,11 +29,22 @@ export const SectionTitle = styled.h2`
   font-size: 4.8rem;
   letter-spacing: 0.2em;
   margin-bottom: 2.4rem;
+
+  ${mq[1]} {
+    font-size: 6.4rem;
+  }
 `;
 
 export const SectionSubTitle = styled.h3`
   font-size: 2.4rem;
   line-height: 1.2em;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+
+  ${mq[1]} {
+    font-size: 3.6rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 export const Footer = styled.footer`
