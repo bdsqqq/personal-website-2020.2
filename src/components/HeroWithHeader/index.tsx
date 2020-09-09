@@ -6,7 +6,18 @@ import Menu from "../Menu";
 
 import { HeroWrapper, PageTitleWrapper, PageTitle } from "./styles";
 
-const Hero = ({ pageTitle, children, ...rest }: any) => {
+interface HeroProps {
+  headerColor?: "light" | "dark";
+  pageTitle?: string;
+  sm?: boolean;
+}
+
+const Hero: React.FC<HeroProps> = ({
+  headerColor,
+  pageTitle,
+  children,
+  ...rest
+}) => {
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
 
   const ToggleMenu = () => {
@@ -14,7 +25,11 @@ const Hero = ({ pageTitle, children, ...rest }: any) => {
   };
   return (
     <HeroWrapper {...rest}>
-      <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
+      <Header
+        color={headerColor}
+        isOpen={menuIsOpen}
+        toggleIsOpen={ToggleMenu}
+      />
       <Menu isOpen={menuIsOpen} hide={ToggleMenu} />
       {pageTitle && (
         <PageTitleWrapper>
