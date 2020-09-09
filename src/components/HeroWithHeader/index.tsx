@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-import useToggleIsOpen from "../../hooks/useToggleState";
-import Header from "../Header";
+import Header, { useHeaderMenu } from "../Header";
 import Menu from "../Menu";
 
 import { HeroWrapper, PageTitleWrapper, PageTitle } from "./styles";
@@ -18,11 +17,8 @@ const Hero: React.FC<HeroProps> = ({
   children,
   ...rest
 }) => {
-  const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
+  const [menuIsOpen, ToggleMenu] = useHeaderMenu();
 
-  const ToggleMenu = () => {
-    useToggleIsOpen(menuIsOpen, setmenuIsOpen);
-  };
   return (
     <HeroWrapper {...rest}>
       <Header
