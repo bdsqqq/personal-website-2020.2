@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 interface thumbProps {
   backgroundImg?: string;
@@ -7,7 +8,7 @@ interface thumbProps {
 
 const ThumbBase: React.FC<thumbProps> = (props) => <figure {...props} />;
 
-export const Card = styled.article`
+export const Card = styled(motion.article)`
   position: relative;
   height: 100%;
   height: 100%;
@@ -28,7 +29,7 @@ export const Thumb = styled(ThumbBase)`
     `url(${props.backgroundImg}) no-repeat center center`};
 `;
 
-export const MetaCard = styled.section`
+export const MetaCard = styled(motion.section)`
   width: 95%;
   max-height: 95%;
   transform-origin: 50% 50%;
