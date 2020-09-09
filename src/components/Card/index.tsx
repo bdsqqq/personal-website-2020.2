@@ -36,19 +36,26 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
     setExpanded(!expanded);
   };
 
+  const variants = {
+    open: {
+      scale: 1,
+      opacity: 0.98,
+    },
+    closed: {
+      scale: 0,
+      opacity: 0,
+    },
+  };
+
   return (
     <Card
+      initial="closed"
       onTap={() => toggleExpanded()}
       onHoverStart={() => handleExpand()}
       onHoverEnd={() => handleShrink()}
     >
       <Thumb backgroundImg={project.img} />
-      <MetaCard
-        animate={{
-          scale: expanded ? 1 : 0,
-          opacity: expanded ? 0.98 : 0,
-        }}
-      >
+      <MetaCard animate={expanded ? "open" : "closed"} variants={variants}>
         <MetaCardHeader>
           <MetaCardTitle>project A</MetaCardTitle>
           <MetaCardYear>{project.year}</MetaCardYear>
