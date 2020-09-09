@@ -20,7 +20,7 @@ export const ContentSection = styled.article`
   color: ${(props) => props.theme.colors.secondaryBlack};
 
   ${mq[1]} {
-    margin-top: -4rem;
+    margin-top: -6rem;
     padding: 6rem 8rem;
   }
 `;
@@ -28,6 +28,12 @@ export const ContentSection = styled.article`
 export const SectionTitle = styled.h2`
   font-size: 4.8rem;
   letter-spacing: 0.2em;
+  margin-bottom: 2.4rem;
+`;
+
+export const SectionSubTitle = styled.h3`
+  font-size: 2.4rem;
+  line-height: 1.2em;
 `;
 
 export const Footer = styled.footer`
