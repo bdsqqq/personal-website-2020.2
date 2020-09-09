@@ -4,9 +4,9 @@ import useToggleIsOpen from "../../hooks/useToggleState";
 import Header from "../Header";
 import Menu from "../Menu";
 
-import { HeroWrapper } from "./styles";
+import { HeroWrapper, PageTitleWrapper, PageTitle } from "./styles";
 
-const Hero = ({ children, ...rest }: any) => {
+const Hero = ({ pageTitle, children, ...rest }: any) => {
   const [menuIsOpen, setmenuIsOpen] = useState<boolean>(false);
 
   const ToggleMenu = () => {
@@ -16,6 +16,11 @@ const Hero = ({ children, ...rest }: any) => {
     <HeroWrapper {...rest}>
       <Header color="light" isOpen={menuIsOpen} toggleIsOpen={ToggleMenu} />
       <Menu isOpen={menuIsOpen} hide={ToggleMenu} />
+      {pageTitle && (
+        <PageTitleWrapper>
+          <PageTitle>{pageTitle}</PageTitle>
+        </PageTitleWrapper>
+      )}
       {children}
     </HeroWrapper>
   );
