@@ -16,7 +16,6 @@ const Menu: React.FC<MenuProps> = ({ isOpen, hide }) =>
             <Wrapper>
               <Nav>
                 <MenuItem to="/">Home</MenuItem>
-                <MenuItem to="/About">Sobre mim</MenuItem>
                 <MenuItem to="/Folio">Folio</MenuItem>
                 <MenuItem to="/Contact">Contato</MenuItem>
               </Nav>
