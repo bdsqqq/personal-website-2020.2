@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mq } from "../../styles/global";
+import { mq, heroImageURL } from "../../styles/global";
 
 const Div = ({ sm, ...rest }: any) => {
   return <div {...sm} {...rest}></div>;
@@ -13,7 +13,7 @@ export const HeroWrapper = styled(Div)`
   min-height: ${(props) => (props.sm ? "32rem" : "48rem")};
   padding: 2.4rem;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
-    url("https://images.unsplash.com/photo-1560759995-d237fb70a79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1866&q=60");
+    url(${heroImageURL});
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
