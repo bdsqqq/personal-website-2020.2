@@ -8,6 +8,7 @@ export default {
     secondaryBlack: "#131313",
 
     fadedWhite: "#f2f2f240",
+    fadedBlack: "#13131360",
   },
 
   fonts: {},

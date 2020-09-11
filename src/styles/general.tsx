@@ -4,7 +4,7 @@ import { mq } from "./global";
 export const Page = styled.div`
   position: relative;
   width: 100%;
-  /*background: ${(props) => props.theme.colors.secondaryBlack};*/
+  background-color: #f2f2f2;
 
   overflow-x: hidden;
 `;
@@ -44,6 +44,15 @@ export const SectionSubTitle = styled.h3`
   ${mq[1]} {
     font-size: 3.6rem;
     margin-bottom: 4rem;
+  }
+`;
+
+export const SectionText = styled.p`
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  ${mq[1]} {
+    font-size: 3.6rem;
   }
 `;
 

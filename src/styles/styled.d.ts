@@ -11,6 +11,7 @@ declare module "styled-components" {
       secondaryBlack: string;
 
       fadedWhite: string;
+      fadedBlack: string;
     };
   }
 }
