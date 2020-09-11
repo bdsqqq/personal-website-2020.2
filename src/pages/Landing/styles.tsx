@@ -34,13 +34,14 @@ export const Main = styled.main`
 export const HeroText = styled.h1`
   font-weight: 700;
   font-size: 3.6rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   max-width: 40rem;
   margin-top: 11.25vh;
 
   color: ${(props) => props.theme.colors.primaryWhite};
 
   ${mq[1]} {
+    letter-spacing: 0.2em;
     max-width: 60rem;
     margin-top: 18rem;
     font-size: 4.8rem;
@@ -56,10 +57,12 @@ export const HeroText = styled.h1`
 `;
 
 export const HeroWord = styled.span`
-  font-size: 7.2rem;
+  font-size: 5.6rem;
+  word-wrap: break-word;
 
   ${mq[1]} {
     font-size: 14.4rem;
+    word-wrap: normal;
   }
 `;
 
