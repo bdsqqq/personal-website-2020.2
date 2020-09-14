@@ -21,9 +21,12 @@ import {
 
 import MasonryGrid from "../../components/MasonryGrid";
 import HeroWrapper from "../../components/HeroWithHeader";
+import BottomSheet, { useBottomSheet } from "../../components/BottomSheet";
 import SocialIcons from "../../components/SocialIcons";
 
 const Landing = () => {
+  const [isExpanded, expandBottomSheet, hideBottomSheet] = useBottomSheet();
+
   return (
     <Page>
       <HeroWrapper>
@@ -55,6 +58,11 @@ const Landing = () => {
       <Footer>
         <SocialIcons color="dark" />
       </Footer>
+      <BottomSheet
+        isExpanded={isExpanded}
+        expand={expandBottomSheet}
+        hide={hideBottomSheet}
+      />
     </Page>
   );
 };
