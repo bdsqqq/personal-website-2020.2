@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const List = styled.div`
   position: relative;
@@ -11,3 +12,5 @@ export const List = styled.div`
     padding: 1rem;
   }
 `;
+
+export const MasonryItem = styled(motion.div)``;
