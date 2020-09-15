@@ -1,14 +1,40 @@
 import React from "react";
-import { FiPhone, FiMail, FiMessageSquare } from "react-icons/fi";
+import {
+  FiPhone,
+  FiMail,
+  FiMessageSquare,
+  FiArrowRight,
+  FiX,
+} from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 import SocialIcons from "../SocialIcons";
-import { Wrapper, Item, Title, Label, Field } from "./styles";
+import {
+  Wrapper,
+  Header,
+  Item,
+  Title,
+  Label,
+  Field,
+  BookingButton,
+  CloseButton,
+} from "./styles";
 
-const ContactInfo = React.memo(() => {
+interface contactInfoProps {
+  hide?: () => void;
+}
+
+const ContactInfo: React.FC<contactInfoProps> = React.memo(({ hide }) => {
   return (
     <Wrapper>
-      <Title>Contato</Title>
+      <Header>
+        <Title>Contato</Title>
+        {hide && (
+          <CloseButton onClick={hide}>
+            <FiX />
+          </CloseButton>
+        )}
+      </Header>
 
       <Item>
         <Label>
@@ -30,6 +56,16 @@ const ContactInfo = React.memo(() => {
         <Label>Sociais</Label>
         <SocialIcons color="dark" />
       </Item>
+      <a
+        style={{ textDecoration: "none" }}
+        target="/"
+        href="https://calendly.com/igorbedesqui/cafezinho"
+      >
+        <BookingButton>
+          agende uma conversa!
+          <FiArrowRight />
+        </BookingButton>
+      </a>
     </Wrapper>
   );
 });
