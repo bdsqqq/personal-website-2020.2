@@ -57,7 +57,7 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
       <Thumb backgroundImg={project.img} />
       <MetaCard animate={expanded ? "open" : "closed"} variants={variants}>
         <MetaCardHeader>
-          <MetaCardTitle>project A</MetaCardTitle>
+          <MetaCardTitle>{project.name}</MetaCardTitle>
           <MetaCardYear>{project.year}</MetaCardYear>
         </MetaCardHeader>
         <MetaCardBody>
@@ -81,13 +81,9 @@ const CardComponent: React.FC<CardProps> = React.memo(({ project }) => {
               )}
             </MetaCardButtonsWrapper>
           )}
-          <MetaCardDetails>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti,
-            possimus dicta natus vel reprehenderit veniam quos impedit numquam
-            placeat ratione molestias odit officia culpa, excepturi hic voluptas
-            dignissimos maiores labore fugit et facere aperiam, consectetur
-            nesciunt sed. Amet, voluptatem vel.
-          </MetaCardDetails>
+          {project.description && (
+            <MetaCardDetails>{project.description}</MetaCardDetails>
+          )}
         </MetaCardBody>
       </MetaCard>
     </Card>
