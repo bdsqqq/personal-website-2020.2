@@ -1,8 +1,6 @@
 import React from "react";
 
-import Header, { useHeaderMenu } from "../Header";
-import Menu from "../Menu";
-
+import Header from "../Header";
 import { HeroWrapper, PageTitleWrapper, PageTitle } from "./styles";
 
 interface HeroProps {
@@ -17,16 +15,9 @@ const Hero: React.FC<HeroProps> = ({
   children,
   ...rest
 }) => {
-  const [menuIsOpen, ToggleMenu] = useHeaderMenu();
-
   return (
     <HeroWrapper {...rest}>
-      <Header
-        color={headerColor}
-        isOpen={menuIsOpen}
-        toggleIsOpen={ToggleMenu}
-      />
-      <Menu isOpen={menuIsOpen} hide={ToggleMenu} />
+      <Header color={headerColor} />
       {pageTitle && (
         <PageTitleWrapper>
           <PageTitle>{pageTitle}</PageTitle>

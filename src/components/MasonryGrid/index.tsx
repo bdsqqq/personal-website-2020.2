@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import data from "./data";
+import React from "react";
 import useMedia from "../../hooks/useMedia";
 import usepureReverseArray from "../../hooks/usePureReverseArray";
 import useMeasure from "react-use-measure";
 
 import Card from "../Card";
+import { Project } from "../../project";
 
 import { List, MasonryItem } from "./styles";
 import { breakpoints } from "../../styles/global";
+
+interface masonryGridProps {
+  projects: Project[];
+}
 
 interface motionProps {
   x?: number;
@@ -15,7 +19,7 @@ interface motionProps {
   height?: number;
 }
 
-const MasonryGrid = React.memo(() => {
+const MasonryGrid: React.FC<masonryGridProps> = React.memo(({ projects }) => {
   // The array is being reverted instead of the number of columns because when i do it the other way it gets stuck on the number of columnsin [0]
   const columns = useMedia(
     usepureReverseArray(breakpoints.map((bp) => `(min-width: ${bp}rem)`)),
@@ -25,7 +29,7 @@ const MasonryGrid = React.memo(() => {
 
   const [measureRef, { width }] = useMeasure();
 
-  const [items] = useState(data);
+  const [...items] = projects;
 
   let heights = new Array(columns).fill(0); // Each column gets a height starting with zero
   let gridItems = items.map((child, i) => {
@@ -64,20 +68,7 @@ const MasonryGrid = React.memo(() => {
             width: gridItem.width,
           }}
         >
-          <Card
-            project={{
-              id: gridItem.id + "",
-              year: "2020",
-              demo: "lalala",
-              img: gridItem.css,
-              name: "",
-              role: "frontend engineer",
-              source: "lalalala",
-              tools: ["React", "RxJS"],
-              order: "1",
-              height: gridItem.height,
-            }}
-          />
+          <Card project={gridItem} />
         </MasonryItem>
       ))}
     </List>

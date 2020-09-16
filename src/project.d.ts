@@ -9,4 +9,5 @@ export interface Project {
   tools: string[];
   order: string;
   height?: any;
+  description?: string;
 }

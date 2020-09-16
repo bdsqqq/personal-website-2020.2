@@ -134,5 +134,6 @@ export const MetaCardButton = styled.a`
 `;
 
 export const MetaCardDetails = styled.p`
+  margin: 0.8rem 0;
   font-size: 1.6rem;
 `;
