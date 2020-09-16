@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
+    "firebase": "^7.20.0",
     "framer-motion": "^2.6.10",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
