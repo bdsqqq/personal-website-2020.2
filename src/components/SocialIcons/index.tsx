@@ -11,10 +11,13 @@ interface SocialIconsProps {
 const SocialIcons: React.FC<SocialIconsProps> = ({ color }) => {
   return (
     <SocialIconsContainer color={color}>
-      <SocialIcon href="https://www.linkedin.com/in/igor-bedesqui/">
+      <SocialIcon
+        href="https://www.linkedin.com/in/igor-bedesqui/"
+        target="_blank"
+      >
         <FiLinkedin />
       </SocialIcon>
-      <SocialIcon href="https://github.com/bdsqqq">
+      <SocialIcon href="https://github.com/bdsqqq" target="_blank">
         <FiGithub />
       </SocialIcon>
     </SocialIconsContainer>
