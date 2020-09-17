@@ -27,6 +27,7 @@ export const Thumb = styled(ThumbBase)`
   height: 90%;
   background: ${(props) =>
     `url(${props.backgroundImg}) no-repeat center center`};
+  background-size: cover;
 `;
 
 export const MetaCard = styled(motion.section)`
