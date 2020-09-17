@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FiLinkedin, FiGithub, FiInstagram } from "react-icons/fi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
 
 import { SocialIcon, SocialIconsContainer } from "./styles";
 
@@ -11,14 +11,11 @@ interface SocialIconsProps {
 const SocialIcons: React.FC<SocialIconsProps> = ({ color }) => {
   return (
     <SocialIconsContainer color={color}>
-      <SocialIcon href="#a">
+      <SocialIcon href="https://www.linkedin.com/in/igor-bedesqui/">
         <FiLinkedin />
       </SocialIcon>
-      <SocialIcon href="#a">
+      <SocialIcon href="https://github.com/bdsqqq">
         <FiGithub />
-      </SocialIcon>
-      <SocialIcon href="#a">
-        <FiInstagram />
       </SocialIcon>
     </SocialIconsContainer>
   );
